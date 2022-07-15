@@ -3,18 +3,6 @@ name: Add or Delete User
 on:
   workflow_dispatch:
     inputs:
-      email:
-        description: 'Email address of User'
-        required: true
-        
-      operation:
-        type: choice
-        description: 'Choose Operation'
-        options:
-        - create
-        - delete
-        required: true
-        
       platform:
         type: choice
         description: 'Choose Platform'
@@ -28,6 +16,10 @@ on:
         - aws
         - appsignal
         required: true
+      if: |
+            ${{github.event.inputs.platform }}  == 'github' 
+      
+          
 
 permissions:
   contents: read
