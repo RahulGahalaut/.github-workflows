@@ -1,5 +1,5 @@
 
-name: Add or Delete User
+name: Add or Delete new User n
 
 on:
   workflow_dispatch:
