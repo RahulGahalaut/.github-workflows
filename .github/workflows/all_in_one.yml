@@ -18,6 +18,13 @@ on:
         required: true
       if: |
             ${{github.event.inputs.platform }}  == 'github' 
+      group:
+        description: 'choose group'
+        type: choice
+        options:
+        - g1
+        - g2
+        - g3
       
           
 
