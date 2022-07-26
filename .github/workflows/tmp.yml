@@ -10,8 +10,9 @@ jobs:
     steps:
 
       - uses: actions/checkout@v3
+      - name: installing mail
+        run: sudo apt install mailutils
+      - name: checking mail
+        run:  mail -V
       - name: sending mail
-        run: |
-          sudo apt install mailutils
-          mail -V
-          mail -s 'temaprory mail' rahulgahalaut333@gmail.com <<< 'testing message body'
+        run: mail -s 'temaprory mail' rahulgahalaut333@gmail.com <<< 'testing message body'
