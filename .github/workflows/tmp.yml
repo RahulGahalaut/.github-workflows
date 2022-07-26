@@ -1,8 +1,7 @@
+name: testing send mail
 
-name:testing workflow
 on:
-  Workflow-dispach:
-  
+  workflow_dispatch:
   
 jobs:
   build:
