@@ -10,7 +10,7 @@ jobs:
     steps:
 
       - uses: actions/checkout@v3
-      - name:sending mail
+      - name: sending mail
         run: |
           sudo apt install mailutils
           mail -V
